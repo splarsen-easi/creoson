@@ -705,6 +705,22 @@ public class JLJsonFileHandler extends JLJsonCommandHandler implements JLFileReq
     	return out;
 	}
 
+	private Hashtable<String, Object> actionExplode(String sessionId, Hashtable<String, Object> input) throws JLIException {
+        String filename = checkStringParameter(input, PARAM_MODEL, false);
+        
+        fileHandler.explode(filename, sessionId);
+
+        return null;
+	}
+
+	private Hashtable<String, Object> actionUnExplode(String sessionId, Hashtable<String, Object> input) throws JLIException {
+        String filename = checkStringParameter(input, PARAM_MODEL, false);
+        
+        fileHandler.unExplode(filename, sessionId);
+
+        return null;
+	}
+
     protected JLConstraintInput readConstraint(Map<String, Object> rec) throws JLIException {
     	if (rec==null)
     		return null;
