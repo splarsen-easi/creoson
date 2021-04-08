@@ -102,6 +102,8 @@ public class JLJsonFileHandler extends JLJsonCommandHandler implements JLFileReq
 		else if (function.equals(FUNC_LOAD_MATL_FILE)) return actionLoadMaterialFile(sessionId, input);
 		else if (function.equals(FUNC_DELETE_MATERIAL)) return actionDeleteMaterial(sessionId, input);
 		else if (function.equals(FUNC_GET_ACCURACY)) return actionGetAccuracy(sessionId, input);
+		else if (function.equals(FUNC_EXPLODE)) return actionExplode(sessionId, input);
+		else if (function.equals(FUNC_EXPLODE)) return actionUnExplode(sessionId, input);
 		else {
 			throw new JLIException("Unknown function name: " + function);
 		}
