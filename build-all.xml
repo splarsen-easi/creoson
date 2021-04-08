@@ -3,12 +3,13 @@
 	<property file="${basedir}/build_vars.properties" />
 	<property name="root_dir" value="${basedir}" />
 
-	<target name="clean">
+	<!-- <target name="clean">
 		<delete dir="${out_dir}"/>
 		<mkdir dir="${out_dir}"/>
-	</target>
+	</target> -->
 
-	<target name="other-ants" depends="clean">
+	<!-- <target name="other-ants" depends="clean"> -->
+	<target name="other-ants">
 		<!-- note that order is important for these -->
 		<ant antfile="build.xml" dir="${root_dir}/creoson-intf"/>
 		<ant antfile="build.xml" dir="${root_dir}/creoson-core"/>
@@ -16,12 +17,12 @@
 		<ant antfile="build.xml" dir="${root_dir}/creo4funcs"/>
 		<ant antfile="build.xml" dir="${root_dir}/creoson-json-const"/>
 		<ant antfile="build.xml" dir="${root_dir}/creoson-json"/>
-		<ant antfile="build-javadoc.xml" dir="${root_dir}"/>
+		<!-- <ant antfile="build-javadoc.xml" dir="${root_dir}"/> -->
 		
 		<!-- TODO: execute GenTemplates to update the json template for the web site -->
 		
 		<ant antfile="build.xml" dir="${root_dir}/creoson-server"/>
-		<ant antfile="build-zip.xml" dir="${root_dir}"/>
+		<!-- <ant antfile="build-zip.xml" dir="${root_dir}"/> -->
 	</target>
 
 </project>
